@@ -37,7 +37,7 @@ class News extends Component {
   }
   render() {
     if (!this.state.newslist || !this.state.sortlist) {
-      return <p > loading data... </p>;
+      return <p> loading data... </p>;
     }
     const list = this.state.newslist.map((data, index) =>
       <div className="col-sm-6 col-md-4">
