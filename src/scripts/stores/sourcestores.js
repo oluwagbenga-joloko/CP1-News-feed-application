@@ -11,26 +11,21 @@ class SourceStore extends EventEmitter {
     dispatcher.register((action) => {
       switch (action.type) {
         case constant.getsource:
-          console.log('stores');
           this.sourcelist = action.data;
           this.emit('source');
           break;
         case constant.filter:
           console.log('inside store');
           const query = action.data;
-          console.log(this.sourcelist);
           this.filterlist = this.sourcelist.filter((source) => {
             if (source.name.toLowerCase().indexOf(query.toLowerCase()) > -1) {
               return source;
             }
-            console.log(this.filterlist)
           },
           );
-          console.log(this.sourcelist);
           this.emit('filter');
           break;
         default:
-    // dfdfdf
       }
     });
   }

@@ -9,7 +9,6 @@ class NewsStore extends EventEmitter {
     dispatcher.register((action) => {
       switch (action.type) {
         case constant.getnews:
-          console.log(action.data);
           this.newslist = action.data;
           this.emit('changeNews');
           break;
@@ -19,7 +18,6 @@ class NewsStore extends EventEmitter {
     });
   }
   getNews() {
-    console.log(this.newslist)
     return this.newslist;
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import user from '../model/usermodel'
 class Header extends Component {
   render() {
     return (
@@ -16,8 +17,13 @@ class Header extends Component {
             </ul>
             <ul className="nav navbar-nav navbar-right">
               {/* <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>*/}
+             
+              
               <li><a href="/#/logout"><span className="glyphicon glyphicon-log-out" /> Log Out</a></li>
             </ul>
+             <form class="nav navbar-nav navbar-right">
+
+      </form>
           </div>
         </nav>
       </div>
