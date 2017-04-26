@@ -10,29 +10,29 @@ const data = [
     { id: 'bella-niger', name: 'Bella' },
 ];
 
-describe('testing of source store', () => {
-  it('the store should initialize with no data', () => {
+describe('source store', () => {
+  it('it should initialize with no data', () => {
     const noData = sourcestore.getSource();
     expect(noData).to.be.empty;
   });
-  it('the store should recieve dispached data', () => {
+  it('it should recieve dispached data', () => {
     dispatcher.dispatch({
       type: constants.getsource,
       data,
     });
     expect(sourcestore.getSource()).to.equal(data);
     expect(sourcestore.getSource()).to.not.be.empty;
-    expect(sourcestore.getSource()[0].id).to.equal('abc-news-au')
+    expect(sourcestore.getSource()[0].id).to.equal('abc-news-au');
   });
-  it('the store filters source properly',() => {
-    const filtered = [{ id: 'yahoo', name: 'Yahoo news' }]
+  it('it should filter source properly', () => {
+    const filtered = [{ id: 'yahoo', name: 'Yahoo news' }];
     dispatcher.dispatch({
-        type: constants.filter,
-        data: 'yahoo'
-    })
-    expect(sourcestore.getSource()).to.not.equal(filtered)
-    expect(sourcestore.getFilter()).to.equal(filtered)
-    expect([]).to.equals([])
-
-  })
+      type: constants.filter,
+      data: 'yahoo'
+    });
+    expect(sourcestore.getSource()).to.not.equal(sourcestore.getFilter());
+    expect(sourcestore.getFilter()[0].id).to.equal(filtered[0].id);
+    expect(sourcestore.getFilter().length).to.equal(1);
+    expect(sourcestore.getFilter().length).to.not.be.undefined;
+  });
 });

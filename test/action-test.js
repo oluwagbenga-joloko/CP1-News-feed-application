@@ -4,11 +4,8 @@ import { shallow, mount, render } from 'enzyme';
 import actions from '../src/scripts/actions/actions';
 import api from '../src/scripts/api/api';
 
-describe('actions',()=>{
+describe('action test',()=>{
     it("it should return an object from api", function(){
         expect(actions).to.exist
-    })
-    it("dummy tests", function(){
-        expect(api.getNews()).to.equal('{}')
     })
 }) 
