@@ -51,6 +51,7 @@
     "auth0-lock": "^10.14.0",
     "events": "^1.1.1",
     "flux": "^3.1.2",
+    "mocha": "^3.3.0",
     "react": "^15.0.0-rc.2",
     "react-dom": "^15.0.0-rc.2",
     "react-google-login": "^2.8.6",
