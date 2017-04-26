@@ -31,28 +31,6 @@ class User {
       this.imageUrl = this.userDetails.imageUrl;
     }
   }
-  addFavorites(newItem) {
-    let exists = false;
-    this.favorites.forEach((item) => {
-      if (item === newItem) {
-        exists = true;
-        return true;
-      }
-      return true;
-    });
-    if (!exists) {
-      if (this.isLogin) {
-        this.favorites.push(newItem);
-        const userobj = {
-          name: this.name,
-          email: this.email,
-          imageUrl: this.imageUrl,
-          favorites: this.favorites,
-        };
-        Cookies.set(constant.cookie, userobj);
-      }
-    }
-  }
   removeFavourite(item, index) {
     this.favorites.splice(index, 1);
   }

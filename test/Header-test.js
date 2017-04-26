@@ -4,7 +4,7 @@ import { shallow, mount, render } from 'enzyme';
 import Header from '../src/scripts/components/header';
 
 describe("test for header component", function() {
-  it("should contain a header with news", function() {
+  it("should contain a nav component", function() {
     expect(shallow(<Header />).contains(<nav/>)).to.exist;
   });
   it('should render children when passed in', () => {
