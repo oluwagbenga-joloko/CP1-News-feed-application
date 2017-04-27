@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
-    "test": "nyc --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.js",
+    "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "author": "",
@@ -58,5 +58,10 @@
     "react-dom": "^15.0.0-rc.2",
     "react-router": "^2.8.1",
     "superagent": "^3.5.2"
+  },
+  "nyc": {
+    "extension": [
+      ".jsx"
+    ]
   }
 }
