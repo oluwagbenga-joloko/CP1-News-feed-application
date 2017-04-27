@@ -3,6 +3,9 @@ import api from '../api/api';
 import constant from '../constants/constants';
 
 const actions = {
+  /**
+   * gets news sources from api
+   */
   getsources() {
     return api.getSources().then((data) => {
       dispatcher.dispatch({

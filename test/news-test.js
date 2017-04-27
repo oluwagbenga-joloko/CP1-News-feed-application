@@ -12,7 +12,7 @@ chai.use(chaiEnzyme());
 describe('it should contain the right elements', () => {
   it('it should return the right elements', () => {
    const wrapper= mount(<Header/>)
-   expect(wrapper).to.contain(<a href="#">Popular</a>)
+   expect(wrapper).to.contain(<a href="#">About</a>)
    expect(wrapper).to.not.contain(<h1></h1>)
     });
 });
