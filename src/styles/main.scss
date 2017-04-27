@@ -42,8 +42,9 @@
   top: 75%;
   bottom: 10%;
   transform: translate(-50%, -50%);
+  height: 36px;
   position: absolute;
-  background-color:black;
+  background-color: red;
   border-radius: 20px;
 
 }
@@ -83,4 +84,16 @@ position: absolute;
   padding: 20px;  
   color: white;
   text-align: center;
+}
+.headlines{
+  width: 70%;
+  color: blue;
+  position: absolute;
+  margin: 0, auto;
+  font-family: "Times New Roman", Times, serif;
+
+}
+body {
+  //width: 100%;
+  //background-image: url('https://agbeat.com/wp-content/uploads/2011/11/world-map.jpg')
 }

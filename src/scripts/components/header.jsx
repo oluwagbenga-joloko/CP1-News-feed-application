@@ -4,7 +4,7 @@ import user from '../model/usermodel'
 class Header extends Component {
   render() {
     return (
-      <div className="nav">
+      <div className="navtop">
         <nav className="navbar navbar-inverse navbar-fixed-top">
           <div className="container-fluid">
             <div className="navbar-header">
@@ -12,7 +12,6 @@ class Header extends Component {
             </div>
             <ul className="nav navbar-nav">
               <li className="active"><a href="#">Home</a></li>
-              <li><a href="#">Popular</a></li>
               <li><a href="#">About</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
