@@ -7,7 +7,8 @@
     "build": "./node_modules/webpack/bin/webpack.js -p",
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
     "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls > lcov.info",
+    "covercheck" :"nyc report --reporter=text-lcov > lcov.info" 
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "chai-enzyme": "^0.6.1",
     "chai-jsx": "^1.0.1",
     "cheerio": "^0.22.0",
+    "codeclimate-test-reporter": "^0.4.1",
     "coveralls": "^2.13.0",
     "css-loader": "^0.28.0",
     "enzyme": "^2.8.2",
