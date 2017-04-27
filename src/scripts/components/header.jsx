@@ -21,7 +21,7 @@ class Header extends Component {
               
               <li><a href="/#/logout"><span className="glyphicon glyphicon-log-out" /> Log Out</a></li>
             </ul>
-             <form class="nav navbar-nav navbar-right">
+             <form className="nav navbar-nav navbar-right">
 
       </form>
           </div>
