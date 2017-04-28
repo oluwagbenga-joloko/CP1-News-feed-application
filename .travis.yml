@@ -1,9 +1,17 @@
 language: node_js
 node_js:
   - 6.10.2
+
 addons:
   code_climate:
     repo_token: 0b974a05f43df273126c3228c799eedf742b8b462e3bb02f69d696f78f4436ca
+  
+before_script:
+    - npm install
+
+script:
+    - npm test
+
 after_success:
    npm run coverage
    npm run covercheck
