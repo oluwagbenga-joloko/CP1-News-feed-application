@@ -15,10 +15,8 @@ class login extends Component {
   }
 render() {
   const responseGoogle = (response) => {
-  console.log(response)
   user.login(response);
-  console.log(response)
-  //window.location.reload();
+  window.location.reload();
   };
   return ( 
     <div className= "loginbody">
