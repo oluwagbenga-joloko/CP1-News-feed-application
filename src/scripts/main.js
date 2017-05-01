@@ -35,7 +35,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
       <Route path='/' component={App} onEnter={requireAuth} >
         <IndexRoute component={Sources}></IndexRoute>
-        <Route path='about/:js' component={About}></Route>
+        <Route path='about' component={About}></Route>
         <Route path='favorites' component={Favorites}></Route>
         <Route path='newslist(/:source)' component={News}></Route>
       </Route>

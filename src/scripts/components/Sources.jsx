@@ -16,7 +16,7 @@ class Sources extends Component {
   }
   componentWillUnmount() {
     sourcestore.removeListener('source', this.onChangeSource);
-    sourcestore.removeListener('filter', this.onChangeSource);
+    sourcestore.removeListener('filter', this.onChangeFilter);
   }
   onChangeFilter() {
     this.setState({ newslist: sourcestore.getFilter() });
@@ -31,28 +31,43 @@ class Sources extends Component {
     actions.filter(query);
   }
   render() {
-    if (!this.state.newslist) {
-      return <p > loading....... </p>;
-    }
-    console.log(this.state.newslist);
-    const list = this.state.newslist.map((data, index) => (
-      <div className="col-sm-2 col-md-3">
-        <a href={`/#/newslist/${data.id}?sort=${data.sortBysAvailable}`}>
-          <div className="thumbnail">
-            <div className="caption">
-              <h3>{data.name}</h3>
-              <p>{data.description}</p>
+    let list=null;
+    if (!this.state.newslist ) {
+      list = <div className="loader"></div>
+    } else if( this.state.newslist[0]===undefined){
+       list = <p className="text-center error"> not found </p>
+    } else {
+       list = this.state.newslist.map((data, index) => {
+         return (
+            <div className="col-sm-4 item">
+              <div className="well ">
+                <a href= {`/#/newslist/${data.id}?sort=${data.sortBysAvailable}&name=${data.name}`}>
+                <img className="arrow" src="http://www.jdcdesignstudio.com/img/arrow-gray.png"/>
+                </a>
+               <h4>{data.name}</h4>
+               <p>{data.description}</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>));
+         )
+            })
+    }
     return (
-      <div className="source" >
-        <input type="text" className="form-control" id="basic-url" onKeyUp={this.handleKeyUp} aria-describedby="basic-addon3" />
-        <div className="row" />
-        <ul > { list } </ul>
-      </div>
-    );
+      <div>
+        <div className="row search">
+          <div className="col-sm-4 col-sm-offset-4">
+            <div className="input-group">
+              <span className="input-group-addon"><i className="glyphicon glyphicon-search"></i></span>
+              <input type="text" className="form-control" onKeyUp={this.handleKeyUp}  placeholder="Search News sources"/>
+             </div>   
+          </div>
+        </div>
+        <div className="content container-fluid"> 
+          <div className="news row">
+           {list}
+          </div>
+        </div>
+  </div>
+
+      )};
   }
-}
 export default Sources;

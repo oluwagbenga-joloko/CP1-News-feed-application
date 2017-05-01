@@ -29,7 +29,6 @@ class Share extends Component {
 
     return (
       <div className="Demo__container">
-        <p>share via</p>
         <div className="Demo__some-network">
           <FacebookShareButton
             url={shareUrl}

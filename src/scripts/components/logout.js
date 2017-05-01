@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import createHistory from 'history/createBrowserHistory';
 import user from '../model/usermodel';
 const history = createHistory({
