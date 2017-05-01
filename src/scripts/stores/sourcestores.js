@@ -15,7 +15,6 @@ class SourceStore extends EventEmitter {
           this.emit('source');
           break;
         case constant.filter:
-          console.log('inside store');
           const query = action.data;
           this.filterlist = this.sourcelist.filter((source) => {
             if (source.name.toLowerCase().indexOf(query.toLowerCase()) > -1) {

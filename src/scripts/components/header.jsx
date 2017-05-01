@@ -4,26 +4,27 @@ import user from '../model/usermodel'
 class Header extends Component {
   render() {
     return (
-      <div className="nav">
-        <nav className="navbar navbar-inverse navbar-fixed-top">
+      <div className="navtop">
+        <nav className="navbar">
           <div className="container-fluid">
             <div className="navbar-header">
-              <a className="navbar-brand" href="#">HotLines</a>
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs" aria-expanded="false">
+              <span className="sr-only">Toggle navigation</span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+      </button>
+              <a className="navbar-brand Newsify">Newsify</a>
             </div>
+            <div className="collapse navbar-collapse" id ="bs">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#">Home</a></li>
-              <li><a href="#">Popular</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="/#/about">About</a></li>
             </ul>
-            <ul className="nav navbar-nav navbar-right">
-              {/* <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>*/}
-             
-              
+            <ul className="nav navbar-nav navbar-right">              
               <li><a href="/#/logout"><span className="glyphicon glyphicon-log-out" /> Log Out</a></li>
             </ul>
-             <form class="nav navbar-nav navbar-right">
-
-      </form>
+            </div>
           </div>
         </nav>
       </div>

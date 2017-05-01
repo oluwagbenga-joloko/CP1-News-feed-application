@@ -1,5 +1,20 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "7"
-script: npm test
+  - 6.10.2
+
+addons:
+  code_climate:
+    repo_token: 8f964096873a5b2c5bcafc7f9f7becb14bdc7988de1af965fea663a54c68cfd2
+  
+before_script:
+    - npm install
+
+script:
+    - npm test
+
+after_success:
+   npm run coverage
+   npm run covercheck
+   npm install -g codeclimate-test-reporter
+   codeclimate-test-reporter < lcov.info
+   npm run codeclimate
