@@ -68,6 +68,9 @@
   "nyc": {
     "extension": [
       ".jsx"
+    ],
+    "exclude": [
+      "**/src/scripts/api/api.js"
     ]
   }
 }
