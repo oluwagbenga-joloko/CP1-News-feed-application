@@ -4,7 +4,7 @@ node_js:
 
 addons:
   code_climate:
-    repo_token: 0b974a05f43df273126c3228c799eedf742b8b462e3bb02f69d696f78f4436ca
+    repo_token: 8f964096873a5b2c5bcafc7f9f7becb14bdc7988de1af965fea663a54c68cfd2
   
 before_script:
     - npm install
