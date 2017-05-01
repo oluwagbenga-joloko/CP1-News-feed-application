@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
+    "start": "node server",
+    "local": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
     "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls > lcov.info",
     "covercheck": "nyc report --reporter=text-lcov > lcov.info",
