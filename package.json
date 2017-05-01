@@ -2,7 +2,7 @@
   "name": "helloworld",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
     "start": "node server",
@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "events": "^1.1.1",
+    "express": "^4.15.2",
     "file-loader": "^0.11.1",
     "flux": "^3.1.2",
     "history": "^4.6.1",
