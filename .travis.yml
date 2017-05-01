@@ -17,3 +17,4 @@ after_success:
    npm run covercheck
    npm install -g codeclimate-test-reporter
    codeclimate-test-reporter < lcov.info
+   npm run codeclimate
