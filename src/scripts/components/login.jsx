@@ -16,7 +16,6 @@ class login extends Component {
 render() {
   const responseGoogle = (response) => {
   user.login(response);
-  console.log(response)
   window.location.reload();
   };
   return ( 
@@ -34,7 +33,7 @@ render() {
         <div className="text-center">
           <GoogleLogin
             className='login'
-            clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+            clientId="350569467549-f1d5q1iguug6dv01n4din8q1p31btkg5.apps.googleusercontent.com"
             buttonText="Login"
             uxMode='popup'
             onSuccess={responseGoogle}
