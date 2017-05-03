@@ -41,12 +41,13 @@ instructions on installing NodeJS on your computer.
 
 - **Clone this repo**: Enter this command in the terminal:
 
+``` bash
+git clone  https://github.com/andela-ojoloko/CP1-News-feed-application
 ```
-git clone  https://github.com/andela-ojoloko/CP1-News-feed-application```
 
-- **Install dependencies**: Do so by running the following command:
+- **Install dependencies** : Do so by running the following command:
 
-```
+``` bash
 npm install
 ```
 Note: `npm` is a component of NodeJS that serves as its package manager. So, it comes along with installing NodeJS.
@@ -54,14 +55,14 @@ Note: `npm` is a component of NodeJS that serves as its package manager. So, it 
 - **Build the project**: This will compile all the project's source code into HTML, CSS and JS files. In 
 the terminal/command prompt, enter the following command:
 
-```
+``` bash
 npm run build
 ```
 
 - **Run the project**: This will run the project on your computer so that you can browse it yourself. In the 
 terminal/command prompt, enter the following command:
 
-```
+``` bash
 npm start
 ```
 
@@ -72,6 +73,7 @@ npm start
 ## Contribute
 
 If you are interested in contributing to development of Newsify, that's really great!
+
 Follow the instructions below to contribute.
 
 - Fork the repository
@@ -91,13 +93,13 @@ Follow the instructions below to contribute.
 
 That's easy. In the root of the project. create a file named `.env` and add the following line to it:
 
-```
+``` bash
 PORT=<your_desired_port>
 ```
 
 where <your\_desired\_port> is the port you want to use. So, if you want to use port `8080`, you will write:
 
-```
+``` bash 
 PORT=8080
 ```
 ----
