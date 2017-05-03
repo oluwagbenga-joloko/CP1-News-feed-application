@@ -2,10 +2,11 @@
   "name": "helloworld",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
-    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
+    "start": "node server",
+    "local": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
     "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls > lcov.info",
     "covercheck": "nyc report --reporter=text-lcov > lcov.info",
@@ -57,6 +58,7 @@
   },
   "dependencies": {
     "events": "^1.1.1",
+    "express": "^4.15.2",
     "file-loader": "^0.11.1",
     "flux": "^3.1.2",
     "history": "^4.6.1",
