@@ -1,8 +1,9 @@
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
-[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
+
 [![Build Status](https://travis-ci.org/andela-ojoloko/CP1-News-feed-application.svg?branch=master)](https://travis-ci.org/andela-ojoloko/CP1-News-feed-application)
 [![Coverage Status](https://coveralls.io/repos/github/andela-ojoloko/CP1-News-feed-application/badge.svg?branch=develop)](https://coveralls.io/github/andela-ojoloko/CP1-News-feed-application?branch=develop)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Code Climate](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application//badges/gpa.svg)](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application/)
+[![Test Coverage](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application/coverage.svg)](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application/coverage)
 
 # [Newsify](https://peaceful-hollows-52077.herokuapp.com)
 
