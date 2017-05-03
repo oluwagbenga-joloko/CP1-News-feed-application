@@ -1,7 +1,11 @@
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
+
+
 # [Newsify](https://peaceful-hollows-52077.herokuapp.com)
 
 ----
-##Description
+## Description
 
 This is a news feed application that enables you view news headlines from over 70 news sources.
 The news sources and articles are gotten from [here](https://newsapi.org/#documentation)
