@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import sourcestore from '../stores/sourcestores';
 import actions from '../actions/actions';
+import Masonry from 'react-masonry-component';
 
 class Sources extends Component {
   constructor() {
@@ -37,9 +38,9 @@ class Sources extends Component {
     } else if( this.state.newslist[0]===undefined){
        list = <p className="text-center error"> not found </p>
     } else {
-       list = this.state.newslist.map((data, index) => {
+       const data = this.state.newslist.map((data, index) => {
          return (
-            <div className="col-sm-4 item">
+            <div className="col-md-6 item">
               <div className="well ">
                 <a href= {`/#/newslist/${data.id}?sort=${data.sortBysAvailable}&name=${data.name}`}>
                 <img className="arrow" src="http://www.jdcdesignstudio.com/img/arrow-gray.png"/>
@@ -49,7 +50,19 @@ class Sources extends Component {
               </div>
             </div>
          )
-            })
+      })
+       const masonryOptions = {
+      transitionDuration: '1s'
+    }; 
+    list=<Masonry
+           className={'my-gallery-class'}
+           elementType={'div'}
+           options={masonryOptions} 
+           disableImagesLoaded={false}
+           updateOnEachImageLoad={true} 
+          >
+            {data}
+        </Masonry>
     }
     return (
       <div>

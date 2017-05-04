@@ -2,7 +2,8 @@ import React, { Component} from 'react';
 import newsStore from '../stores/newsstore';
 import actions from '../actions/actions';
 import Share from '../share/share.jsx';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import Masonry from'react-masonry-component'
 
 
 class News extends Component {
@@ -42,7 +43,7 @@ class News extends Component {
     if (!this.state.newslist || this.state.newslist.length===1) {
       list= <div className="loader"></div> 
     } else {
-      list = this.state.newslist.map((data, index) =>
+       const data = this.state.newslist.map((data, index) =>
         <div className="col-sm-6 col-md-4" key={Math.random()* Math.random()}>
           <div className="thumbnail newsthumb">
             <img src={`${data.urlToImage}`} alt="..." />
@@ -55,7 +56,19 @@ class News extends Component {
               </div>
             </div>
           </div>
-      </div>);
+      </div>)
+      const masonryOptions = {
+      transitionDuration: 0
+    }; 
+    list=<Masonry
+           className={'my-gallery-class'}
+           elementType={'div'}
+           options={masonryOptions} 
+           disableImagesLoaded={false}
+           updateOnEachImageLoad={true} 
+          >
+            {data}
+        </Masonry>
     }
     const option = this.state.sortlist.map(data => <option value={data} > { data } </option>);
     return (

@@ -65,6 +65,7 @@
     "masonry-layout": "^4.2.0",
     "mocha": "^3.3.0",
     "react-dom": "^15.0.0-rc.2",
+    "react-masonry-component": "^5.0.5",
     "react-router": "^2.8.1",
     "superagent": "^3.5.2"
   },
