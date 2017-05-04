@@ -58,7 +58,7 @@ class News extends Component {
           </div>
       </div>)
       const masonryOptions = {
-      transitionDuration: 0
+      transitionDuration: '0.5s'
     }; 
     list=<Masonry
            className={'my-gallery-class'}
