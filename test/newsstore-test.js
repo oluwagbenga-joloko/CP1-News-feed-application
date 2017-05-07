@@ -1,24 +1,24 @@
 import { expect } from 'chai';
-import newsstore from '../src/scripts/stores/newsstore';
-import constants from '../src/scripts/constants/constants';
-import dispatcher from '../src/scripts/dispatcher/dispatcher';
+import Newsstore from '../src/stores/Newsstore';
+import Constants from '../src/constants/Constants';
+import Dispatcher from '../src/dispatcher/Dispatcher';
+import { Articles } from './test-data';
 
-const data = [{ title: 'andela hire', description: 'Andela just hired 200 new fellows' },
-             { title: 'nigeria won', description: 'Nigeria just won the world cup' },
-             { title: 'lagos traffic', description: 'lagos traffic just got worse' },
-             { title: 'President Trump', description: 'President Trump  visited Russia' },
-];
+
+
 
 describe('news store', () => {
+  const data = Articles;
+  
   it('the store should initialize with no data', () => {
-    expect(newsstore.getNews()).to.be.empty;
+    expect(Newsstore.getNews()).to.be.empty;
   });
   it('it should recieve dispatched data', () => {
-    dispatcher.dispatch({
-      type: constants.getnews,
+    Dispatcher.dispatch({
+      type: Constants.getnews,
       data
     });
-    const result = newsstore.getNews();
+    const result = Newsstore.getNews();
     expect(result[5]).to.be.undefined;
     expect(result[0].title).to.equal(data[0].title);
     expect(result[0].title).to.not.equal(data[2].title);
