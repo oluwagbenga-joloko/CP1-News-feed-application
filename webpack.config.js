@@ -15,7 +15,7 @@ module.exports = {
     })
   ],
   entry: {
-    main: './src/main.js'
+    main: './src/main.jsx'
   },
   output: {
     filename: './dist/scripts/[name].js'
