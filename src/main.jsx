@@ -7,7 +7,7 @@ import App from './components/App.jsx';
 import About from './components/about.jsx';
 import News from './components/News.jsx';
 import login from './components/login.jsx';
-import Logout from './components/logout.js';
+import Logout from './components/logout.jsx';
 import User from './model/User';
 
 /**
