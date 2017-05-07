@@ -1,38 +1,33 @@
 import { expect } from 'chai';
-import sourcestore from '../src/scripts/stores/sourcestores';
-import dispatcher from '../src/scripts/dispatcher/dispatcher';
-import constants from '../src/scripts/constants/constants';
-
-const data = [
-    { id: 'abc-news-au', name: 'ABC News (AU)' },
-    { id: 'yahoo', name: 'Yahoo news' },
-    { id: 'bella-niger', name: 'Bella' },
-    { id: 'bella-niger', name: 'Bella' },
-];
+import Sourcestore from '../src/stores/Sourcestores';
+import Dispatcher from '../src/dispatcher/Dispatcher';
+import Constants from '../src/constants/Constants';
+import { Source } from './test-data';
 
 describe('source store', () => {
+  const data = Source;
   it('it should initialize with no data', () => {
-    const noData = sourcestore.getSource();
+    const noData = Sourcestore.getSource();
     expect(noData).to.be.empty;
   });
   it('it should recieve dispached data', () => {
-    dispatcher.dispatch({
-      type: constants.getsource,
+    Dispatcher.dispatch({
+      type: Constants.getsource,
       data,
     });
-    expect(sourcestore.getSource()).to.equal(data);
-    expect(sourcestore.getSource()).to.not.be.empty;
-    expect(sourcestore.getSource()[0].id).to.equal('abc-news-au');
+    expect(Sourcestore.getSource()).to.equal(data);
+    expect(Sourcestore.getSource()).to.not.be.empty;
+    expect(Sourcestore.getSource()[0].id).to.equal('abc-news-au');
   });
   it('it should filter source properly', () => {
     const filtered = [{ id: 'yahoo', name: 'Yahoo news' }];
-    dispatcher.dispatch({
-      type: constants.filter,
+    Dispatcher.dispatch({
+      type: Constants.filter,
       data: 'yahoo'
     });
-    expect(sourcestore.getSource()).to.not.equal(sourcestore.getFilter());
-    expect(sourcestore.getFilter()[0].id).to.equal(filtered[0].id);
-    expect(sourcestore.getFilter().length).to.equal(1);
-    expect(sourcestore.getFilter().length).to.not.be.undefined;
+    expect(Sourcestore.getSource()).to.not.equal(Sourcestore.getFilter());
+    expect(Sourcestore.getFilter()[0].id).to.equal(filtered[0].id);
+    expect(Sourcestore.getFilter().length).to.equal(1);
+    expect(Sourcestore.getFilter().length).to.not.be.undefined;
   });
 });
