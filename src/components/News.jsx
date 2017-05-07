@@ -32,7 +32,6 @@ class News extends Component {
    * @returns {undefined}
    */
   componentWillMount() {
-    console.log(this.state.sortlist);
     Actions.getnews(this.query, 'top');
     Newsstore.on('changeNews', this.onChangeNews);
   }
