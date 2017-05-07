@@ -4,12 +4,23 @@ $col3:#f7786b;
 
 .content {
   height:600px;
-    overflow-y: scroll;
-    padding-top: 18px;
+  overflow: -moz-scrollbars-vertical;
+    overflow-y: auto;
+    padding-top: 20px;
     margin-top: 2px;
-    max-width: 1000px;
+    max-width: 1090px;
     margin: auto;
     background-color:white;
+    ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
 }
 .search{
   margin-bottom: 20px;
@@ -61,11 +72,13 @@ $col3:#f7786b;
   text-align: center;
 }
 .info{
+  padding:0px 15px 0px 35px;
+  max-width: 1090px;
   background-color: white;
   margin-bottom: 30px;
 }
 .newsrow{
-  padding:0px;
+  padding:0px 10px 0px 23px;
   margin: 0px;
 }
 .thumbnail{
@@ -85,11 +98,13 @@ h3{
   font-family: 'Playfair Display', serif;
 }
 .newsHeader{
-  font-size: 55px;
+  margin-left: 20px;
+  font-size: 50px;
   font-weight: bold;
   color:#f7786b;
 }
 .sort{
+  margin-right:11px;
   margin-top: 30px;
 }
 .labelsort {
@@ -101,7 +116,7 @@ h3{
 .login{
 
   background-color:   $col;
-  border: 10px $col solid;
+  border: 20px $col solid;
     transform: scale(0.6);
 }
 .loginheader {
@@ -123,11 +138,12 @@ h3{
   bottom: 0;
   left:0;
   right:0;
-    overflow: scroll;
+    overflow-y: scroll;
     //height:1500px;
     background:$col;
 }
 .Newsify {
+ padding-right:25px;
  font-family: 'Lobster', cursive;
  font-size: 25px;
  font-weight: bold;
@@ -167,6 +183,11 @@ h3{
   color: $col3;
 }
 .footer {
+  margin-top: 14px;
   padding: 1px;
   color:white;
 }
+// .loginImage {
+//   border: 20px white solid;
+//   background: white;
+// }
