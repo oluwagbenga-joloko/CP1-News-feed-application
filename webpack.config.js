@@ -5,10 +5,17 @@ function getDevTool() {
 
   return false;
 }
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
+  plugins: [
+    new Dotenv({
+      path: './.env', // Path to .env file (this is the default)
+    })
+  ],
   entry: {
-    main: './src/scripts/main.js'
+    main: './src/main.js'
   },
   output: {
     filename: './dist/scripts/[name].js'
@@ -28,6 +35,13 @@ module.exports = {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader'
+      }
     ]
-  }
+  },
+  node: {
+    fs: 'empty'
+  },
 };
