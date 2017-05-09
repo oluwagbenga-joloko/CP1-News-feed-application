@@ -39,8 +39,8 @@ class Login extends Component {
             <h1 className="loginheader">Newsify</h1>
           </div>
           <div className="row text-center logindiv">
-            <p classID="logintext"> View news headlines from over 70 Sources </p>
-            <p classID="logintext" > Stay up to date with Worldwide News</p>
+            <p classID="logintext">View news headlines from over 70 Sources</p>
+            <p classID="logintext" >Stay up to date with Worldwide News</p>
           </div>
           <div className="row">
             <div className="text-center">
@@ -52,7 +52,7 @@ class Login extends Component {
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
               >
-                <img src="../../dist/images/login.png" alt="login with google" />
+                <img src="../images/login.png" alt="login with google" />
               </GoogleLogin>
             </div>
           </div>

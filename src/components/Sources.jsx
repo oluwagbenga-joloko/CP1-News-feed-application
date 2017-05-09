@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import Sourcestore from '../stores/Sourcestores';
 import Actions from '../actions/Actions';
+import Search from './Search.jsx';
 
 /**
  * @class Sources
@@ -85,7 +86,7 @@ class Sources extends Component {
         <div className="col-md-6 item">
           <div className="well ">
             <a href={`/#/newslist/${data.id}?sort=${data.sortBysAvailable}&name=${data.name}`}>
-              <img className="arrow" alt=" could not load" src="../../dist/images/arrow-gray.png" />
+              <img className="arrow" alt=" could not load" src="./images/arrow-gray.png" />
             </a>
             <h4>{data.name}</h4>
             <p>{data.description}</p>
@@ -107,19 +108,7 @@ class Sources extends Component {
     }
     return (
       <div>
-        <div className="row search">
-          <div className="col-sm-4 col-sm-offset-4">
-            <div className="input-group">
-              <span className="input-group-addon">
-                <i className="glyphicon glyphicon-search" />
-              </span>
-              <input
-                type="text" className="form-control" onKeyUp={this.handleKeyUp}
-                placeholder="Search News sources"
-              />
-            </div>
-          </div>
-        </div>
+        <Search handleKeyUp={this.handleKeyUp}/>
         <div className="content container-fluid">
           <div className="news row">
             {list}
