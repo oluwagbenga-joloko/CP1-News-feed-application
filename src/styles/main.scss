@@ -190,7 +190,7 @@ h3{
 .github {
   color:white;
   &:hover{
-    color:$col2;
+    color:$col3 !important;
     text-decoration: none;
   };
   &:visited{
