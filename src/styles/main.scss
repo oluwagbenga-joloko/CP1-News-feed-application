@@ -144,7 +144,7 @@ h3{
     background:$col;
 }
 .Newsify {
- padding-right:25px;
+ padding-right:40px;
  font-family: 'Lobster', cursive;
  font-size: 25px;
  font-weight: bold;
@@ -153,15 +153,20 @@ h3{
   background-color: $col;
   margin-bottom: 0;
   border-radius: 0;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
+      color: #fff ;
       }
 .navbar-nav li a:hover {
-      color: $col !important;
-      background-color: white !important;
-      }
+      color: $col ;
+      background-color: white;
+     }
+
+.nohover a:hover {
+  background-color: $col !important;
+  color: white !important;
+}
 .glyphicon-search, .share{
   color: $col3;
 }
@@ -188,7 +193,16 @@ h3{
   padding: 1px;
   color:white;
 }
-// .loginImage {
-//   border: 20px white solid;
-//   background: white;
-// }
+.logoutbtn{
+ padding-right: 9px;
+}
+.github {
+  color:white;
+  &:hover{
+    color:$col2;
+    text-decoration: none;
+  };
+  &:visited{
+  color:$col2;
+  }
+}

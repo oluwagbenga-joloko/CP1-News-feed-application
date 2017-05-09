@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 /**
@@ -17,3 +18,9 @@ function App(props) {
   );
 }
 export default App;
+App.defaultProps = {
+  children: () => undefined
+};
+App.propTypes = {
+  children: PropTypes.element
+};

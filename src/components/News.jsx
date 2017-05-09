@@ -67,9 +67,12 @@ class News extends Component {
       const articles = this.state.newslist.map(data =>
         <div className="col-sm-6 col-md-4" key={Math.random() * Math.random()}>
           <div className="thumbnail newsthumb">
-            <img src={`${data.urlToImage}`} alt="could not load image" />
+            <img
+              src={`${data.urlToImage}`}
+              alt="News article"
+            />
             <div className="caption">
-              <h3 ><a className="newstitle" href={`${data.url}`} >{ data.title }</a></h3>
+              <h3 ><a className="newstitle" href={`${data.url}`}>{ data.title }</a></h3>
               <p className="newsdesc">{ data.description }</p>
               <div>
                 <span className="share">Share via</span>
@@ -123,7 +126,7 @@ class News extends Component {
 export default News;
 
 News.propTypes = {
-  params: PropTypes.object
+  params: PropTypes.shape
 };
 
 News.defaultProps = {

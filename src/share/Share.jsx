@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   ShareButtons,
   generateShareIcon,
@@ -81,3 +82,13 @@ function Share(props) {
 }
 
 export default Share;
+Share.propTypes = {
+  share: PropTypes.shape,
+  title:PropTypes.shape
+
+};
+
+Share.defaultProps = {
+  share: 'cunn',
+  title: 'gmail'
+};
