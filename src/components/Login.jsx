@@ -46,7 +46,7 @@ class Login extends Component {
             <div className="text-center">
               <GoogleLogin
                 className="login"
-                clientId="350569467549-f1d5q1iguug6dv01n4din8q1p31btkg5.apps.googleusercontent.com"
+                clientId={process.env.CLIENT_ID}
                 buttonText="Login"
                 uxMode="popup"
                 onSuccess={responseGoogle}
