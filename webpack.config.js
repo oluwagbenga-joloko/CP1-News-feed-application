@@ -18,7 +18,7 @@ module.exports = {
     main: './src/main.jsx'
   },
   output: {
-    filename: './dist/scripts/[name].js'
+    filename: './dist/scripts/[name].js',
   },
   devtool: getDevTool(),
   module: {
@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: 'url-loader'
+        loader: ['file-loader?name=/images/[name].[ext]']
       }
     ]
   },

@@ -5,13 +5,17 @@ import User from '../model/User';
  * @returns {*} element to be rendered
  */
 function Header() {
+  const fullName = User.userDetails.name.split(' ');
+  const firstName = fullName[0];
   return (
     <div className="navtop">
       <nav className="navbar">
         <div className="container-fluid">
           <div className="navbar-header">
             <button
-              type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+              type="button"
+              className="navbar-toggle collapsed"
+              data-toggle="collapse"
               data-target="#bs" aria-expanded="false"
             >
               <span className="sr-only">Toggle navigation</span>
@@ -24,10 +28,12 @@ function Header() {
           <div className="collapse navbar-collapse" id="bs">
             <ul className="nav navbar-nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/#/about">About</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li>
+              <li className="nohover">
+                <a classID> Welcome, {firstName}.</a>
+              </li>
+              <li className="logoutbtn">
                 <a href="/#/logout"><span className="glyphicon glyphicon-log-out" />Log Out</a>
               </li>
             </ul>
