@@ -82,3 +82,12 @@ function Share(props) {
 }
 
 export default Share;
+Share.propTypes = {
+  share: PropTypes.string,
+  title: PropTypes.string
+};
+
+Share.defaultProps = {
+  share: 'yahoo.com',
+  title: 'yahoo'
+};
