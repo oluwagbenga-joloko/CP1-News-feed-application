@@ -3,7 +3,7 @@
 [![Test Coverage](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application/coverage.svg)](https://codeclimate.com/github/andela-ojoloko/CP1-News-feed-application/coverage)
 [![Build Status](https://travis-ci.org/andela-ojoloko/CP1-News-feed-application.svg?branch=develop)](https://travis-ci.org/andela-ojoloko/CP1-News-feed-application)
 <a href='https://coveralls.io/github/andela-ojoloko/CP1-News-feed-application?branch=develop'><img src='https://coveralls.io/repos/github/andela-ojoloko/CP1-News-feed-application/badge.svg?branch=develop' alt='Coverage Status' /></a>
-# [Newsify](https://peaceful-hollows-52077.herokuapp.com)
+# [Newsify](http://newsfeed-newsify.herokuapp.com/)
 
 
 ----

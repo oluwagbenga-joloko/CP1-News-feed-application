@@ -84,11 +84,11 @@ function Share(props) {
 export default Share;
 Share.propTypes = {
   share: PropTypes.shape,
-  title:PropTypes.shape
+  title: PropTypes.shape
 
 };
 
 Share.defaultProps = {
-  share: 'cunn',
+  share: 'cnn',
   title: 'gmail'
 };
