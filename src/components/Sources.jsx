@@ -83,7 +83,7 @@ class Sources extends Component {
       list = <p className="text-center error"> not found </p>;
     } else {
       const sources = this.state.newslist.map(data => (
-        <div className="col-md-6 item" key={Math.random() * Math.random()}>
+        <div className="col-md-6 item" key={data.url}>
           <div className="well ">
             <a href={`/#/newslist/${data.id}?sort=${data.sortBysAvailable}&name=${data.name}`}>
               <img className="arrow" alt=" could not load" src="./Images/arrow-gray.png" />
