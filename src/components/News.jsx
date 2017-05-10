@@ -65,7 +65,7 @@ class News extends Component {
       list = <div className="loader" />;
     } else {
       const articles = this.state.newslist.map(data =>
-        <div className="col-sm-6 col-md-4" key={Math.random() * Math.random()}>
+        <div className="col-sm-6 col-md-4" key={data.url}>
           <div className="thumbnail newsthumb">
             <img
               src={`${data.urlToImage}`}
@@ -94,7 +94,8 @@ class News extends Component {
         {articles}
       </Masonry>);
     }
-    const option = this.state.sortlist.map(data => <option value={data} > { data } </option>);
+    const option = this.state.sortlist.map(data =>
+      <option value={data} key={data} > { data } </option>);
     return (
       <div>
         <div className="container-fluid info">
@@ -126,7 +127,8 @@ class News extends Component {
 export default News;
 
 News.propTypes = {
-  params: PropTypes.shape
+  params: PropTypes.object,
+  location: PropTypes.object
 };
 
 News.defaultProps = {
