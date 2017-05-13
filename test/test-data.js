@@ -8,7 +8,8 @@ const Source = [
     { title: 'andela hire', description: 'Andela just hired 200 new fellows' },
     { title: 'nigeria won', description: 'Nigeria just won the world cup' },
     { title: 'lagos traffic', description: 'lagos traffic just got worse' },
-    { title: 'President Trump', description: 'President Trump  visited Russia' },
+    { title: 'President Trump',
+      description: 'President Trump  visited Russia' },
   ],
   Response = { w3: { ig: 'bola', U3: 'bola@gmail', Paa: 'www.image.com' } };
 

@@ -3,21 +3,21 @@ import Dispatcher from '../dispatcher/Dispatcher';
 import Constant from '../constants/Constants';
 
 /**
- * news store updates the news compoent
+ * @description news store updates the news component
  * @class NewsStore
  * @extends {EventEmitter}
  */
 class NewsStore extends EventEmitter {
 /**
- * Creates an instance of NewsStore.
- * @param {any} props
+ * @description Creates an instance of NewsStore
  * @memberof NewsStore
  */
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.newslist = [];
   }
 /**
+ * @description returns list of news
  * @returns {object} returns list of news.
  * @memberof NewsStore
  */

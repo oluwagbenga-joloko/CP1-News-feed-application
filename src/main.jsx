@@ -10,9 +10,9 @@ import Logout from './components/Logout.jsx';
 import User from './model/User';
 
 /**
- * checks if user is logged in
- * @param {any} nextState
- * @param {any} replace
+ * @description checks if user is logged in
+ * @param {string} nextState redirect path
+ * @param {function} replace redirect function
  * @returns {undefined} no return value
  */
 function requireAuth(nextState, replace) {
@@ -25,9 +25,9 @@ function requireAuth(nextState, replace) {
   }
 }
 /**
- * checks if user is logged out
- * @param {any} nextState
- * @param {any} replace
+ * @description checks if user is logged out
+ * @param {string} nextState redirect path
+ * @param {function} replace reditect function
  * @returns {undefined} no return value.
  */
 function checkAuth(nextState, replace) {

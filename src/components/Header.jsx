@@ -1,11 +1,11 @@
 import React from 'react';
 import User from '../model/User';
 /**
- * header element
- * @returns {*} element to be rendered
+ *@description header element
+ *@returns {*} element to be rendered
  */
 function Header() {
-  const fullName = User.userDetails.name.split(' ');
+  const fullName = User.name.split(' ');
   const firstName = fullName[0];
   return (
     <div className="navtop">
@@ -31,10 +31,13 @@ function Header() {
             </ul>
             <ul className="nav navbar-nav navbar-right">
               <li className="nohover">
-                <a classID> Welcome, {firstName}.</a>
+                <a classID> Welcome, {firstName}</a>
               </li>
               <li className="logoutbtn">
-                <a href="/#/logout"><span className="glyphicon glyphicon-log-out" />Log Out</a>
+                <a href="/#/logout">
+                  <span className="glyphicon glyphicon-log-out" />
+                  Log Out
+                </a>
               </li>
             </ul>
           </div>

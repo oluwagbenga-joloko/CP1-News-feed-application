@@ -3,14 +3,13 @@ import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Footer from '../src/components/Footer.jsx';
+import Footer from '../src/components/Footer';
 
 chai.use(chaiEnzyme());
 const wrapper = shallow(<Footer />);
 
 describe('test for footer component', () => {
   it('should exist', () => {
-    expect(wrapper).to.exist;
     expect(wrapper).to.be.present();
   });
   it('it should have the firt p tag with text = &copy; Copyright 2017 Andela © Copyright 2017 Andela || By  Oluwagbenga Joloko', () => {

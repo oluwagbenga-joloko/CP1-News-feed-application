@@ -27,25 +27,25 @@ class News extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   /**
-   * runs before the component mounts
+   * @description runs before the component mounts
    * @memberof News
-   * @returns {undefined}
+   * @returns {undefined} returns no value
    */
   componentWillMount() {
     Actions.getnews(this.query, 'top');
     Newsstore.on('changeNews', this.onChangeNews);
   }
   /**
-   * changes newslist and calls setState
+   * @description changes newslist and sets state
    * @memberof News
-   * @returns {undefined}
+   * @returns {undefined} returns no value
    */
   onChangeNews() {
     this.setState({ newslist: Newsstore.getNews() });
   }
   /**
-   * handles key up event and calls an action
-   * @param {any} event
+   * @description handles key up event and calls an action
+   * @param {any} event they are triggered by html actions
    * @memberof News
    * @returns {undefined}
    */
@@ -55,8 +55,8 @@ class News extends Component {
     Actions.getnews(this.props.params.source, val);
   }
   /**
-   * it renders react element
-   * @returns{*} return element
+   * @description it renders react element
+   * @returns {*} returns element to be rendered
    * @memberof News
    */
   render() {
@@ -72,7 +72,13 @@ class News extends Component {
               alt="News article"
             />
             <div className="caption">
-              <h3 ><a className="newstitle" href={`${data.url}`}>{ data.title }</a></h3>
+              <h3 >
+                <a
+                  className="newstitle"
+                  href={`${data.url}`}
+                >{ data.title }
+                </a>
+              </h3>
               <p className="newsdesc">{ data.description }</p>
               <div>
                 <span className="share">Share via</span>
@@ -105,9 +111,17 @@ class News extends Component {
             </div>
             <div className="col-sm-4 ">
               <div className="form-group sort">
-                <label htmlFor="div" className="control-label col-sm-2   labelsort" >Sort:</label>
+                <label
+                  htmlFor="div"
+                  className="control-label col-sm-2 labelsort"
+                >
+                  Sort:
+                </label>
                 <div className="col-sm-10">
-                  <select className="form-control" onChange={this.handleChange} >
+                  <select
+                    className="form-control"
+                    onChange={this.handleChange}
+                  >
                     { option }
                   </select>
                 </div>
@@ -126,11 +140,6 @@ class News extends Component {
 }
 export default News;
 
-News.propTypes = {
-  params: PropTypes.object,
-  location: PropTypes.object
-};
-
 News.defaultProps = {
   params: {
     source: 'cnn'
@@ -138,4 +147,9 @@ News.defaultProps = {
   location: {
     query: { name: 'cnn news', sort: 'top' }
   }
+};
+
+News.propTypes = {
+  params: PropTypes.shape,
+  location: PropTypes.shape
 };

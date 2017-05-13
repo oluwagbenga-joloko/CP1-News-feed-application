@@ -2,7 +2,7 @@ import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
-import Sources from '../src/components/Sources.jsx';
+import Sources from '../src/components/Sources';
 
 chai.use(chaiEnzyme());
 const wrapper = shallow(<Sources />);
@@ -23,8 +23,6 @@ describe('test for source componet', () => {
   });
   it('it should contain a div element', () => {
     expect(wrapper.find('div')).to.be.present();
-    expect(wrapper.find('div')).to.have.length(4);
-    expect(wrapper.find('div')).to.not.have.length(12);
   });
 });
 
