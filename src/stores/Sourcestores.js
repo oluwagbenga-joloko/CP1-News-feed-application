@@ -9,7 +9,6 @@ import Constant from '../constants/Constants';
 class SourceStore extends EventEmitter {
   /**
    * Creates an instance of SourceStore.
-   * @param {any} ghj
    * @memberof SourceStore
    */
   constructor() {

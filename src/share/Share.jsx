@@ -18,7 +18,7 @@ const TwitterIcon = generateShareIcon('twitter');
 const GooglePlusIcon = generateShareIcon('google');
 const LinkedinIcon = generateShareIcon('linkedin');
 /**
- * @param {any} props
+ * @param {any} props input for component
  * @returns {*} element to be rendered
  */
 function Share(props) {

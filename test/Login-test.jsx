@@ -4,7 +4,7 @@ import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
 import User from '../src/model/User';
-import Login from '../src/components/Login.jsx';
+import Login from '../src/components/Login';
 
 
 chai.use(chaiEnzyme());
@@ -14,7 +14,6 @@ const wrapper = shallow(<Login />);
 
 describe('Login component', () => {
   it('should exist', () => {
-    expect(wrapper).to.exist;
     expect(wrapper).to.be.present();
   });
   it('it should have the first p tag with text = View news headlines from over 70 Sources ', () => {

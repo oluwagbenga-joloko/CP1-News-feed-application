@@ -28,8 +28,10 @@ class News extends Component {
   }
   /**
    * runs before the component mounts
+   * it calls an action and
+   * listens to changes in the store
    * @memberof News
-   * @returns {undefined}
+   * @returns {undefined} returns no value
    */
   componentWillMount() {
     Actions.getnews(this.query, 'top');
@@ -38,14 +40,14 @@ class News extends Component {
   /**
    * changes newslist and calls setState
    * @memberof News
-   * @returns {undefined}
+   * @returns {undefined} returns no value
    */
   onChangeNews() {
     this.setState({ newslist: Newsstore.getNews() });
   }
   /**
    * handles key up event and calls an action
-   * @param {any} event
+   * @param {any} event they are triggered by html actions
    * @memberof News
    * @returns {undefined}
    */
@@ -65,7 +67,7 @@ class News extends Component {
       list = <div className="loader" />;
     } else {
       const articles = this.state.newslist.map(data =>
-        <div className="col-sm-6 col-md-4" key={Math.random() * Math.random()}>
+        <div className="col-sm-6 col-md-4" key={data.url}>
           <div className="thumbnail newsthumb">
             <img
               src={`${data.urlToImage}`}
@@ -94,7 +96,8 @@ class News extends Component {
         {articles}
       </Masonry>);
     }
-    const option = this.state.sortlist.map(data => <option value={data} > { data } </option>);
+    const option = this.state.sortlist.map(data =>
+      <option value={data} key={data} > { data } </option>);
     return (
       <div>
         <div className="container-fluid info">
@@ -104,7 +107,9 @@ class News extends Component {
             </div>
             <div className="col-sm-4 ">
               <div className="form-group sort">
-                <label htmlFor="div" className="control-label col-sm-2   labelsort" >Sort:</label>
+                <label htmlFor="div" className="control-label col-sm-2 labelsort" >
+                  Sort:
+                </label>
                 <div className="col-sm-10">
                   <select className="form-control" onChange={this.handleChange} >
                     { option }
@@ -126,7 +131,8 @@ class News extends Component {
 export default News;
 
 News.propTypes = {
-  params: PropTypes.shape
+  params: PropTypes.object,
+  location: PropTypes.object
 };
 
 News.defaultProps = {

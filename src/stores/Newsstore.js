@@ -9,12 +9,11 @@ import Constant from '../constants/Constants';
  */
 class NewsStore extends EventEmitter {
 /**
- * Creates an instance of NewsStore.
- * @param {any} props
+ * Creates an instance of NewsStore
  * @memberof NewsStore
  */
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.newslist = [];
   }
 /**

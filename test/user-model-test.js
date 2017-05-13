@@ -4,7 +4,7 @@ import { Response } from './test-data';
 
 describe('test for user model', () => {
   it('should exist', () => {
-    expect(User).to.exist;
+    expect(User).to.be.an('object');
   });
   it('should log the user in correcly', () => {
     User.login(Response);

@@ -2,6 +2,7 @@ const Request = require('superagent');
 
 const ApiCall = {
   /**
+   * gets news source from newsapi
    * @returns {object} list of news source
    */
   getSources() {
@@ -13,8 +14,9 @@ const ApiCall = {
     });
   },
   /**
-   * @param {string} source
-   * @param {string} sort
+   * gets articles from news api
+   * @param {string} source news source
+   * @param {string} sort news article sort parameter
    * @returns {object} articles
    */
   getNews(source = '', sort = '') {

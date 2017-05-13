@@ -4,8 +4,8 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 /**
  * the app compont
- * all other components that require a header and footer are rendered here
- * @param {object} props
+ * all other components that require a header and footer are rendered
+ * @param {object} props input for component
  * @returns {*} renders react element
  */
 function App(props) {

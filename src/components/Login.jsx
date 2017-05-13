@@ -16,7 +16,7 @@ class Login extends Component {
   /**
    * runs before component mounts
    * @memberof login
-   * @return {undefined}
+   * @return {undefined} has no return value
    */
   componentWillMount() {
     if (User.isLogin) {

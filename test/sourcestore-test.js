@@ -8,7 +8,7 @@ describe('source store', () => {
   const data = Source;
   it('it should initialize with no data', () => {
     const noData = Sourcestore.getSource();
-    expect(noData).to.be.empty;
+    expect(noData).to.eql([]);
   });
   it('it should recieve dispached data', () => {
     Dispatcher.dispatch({
@@ -16,7 +16,7 @@ describe('source store', () => {
       data,
     });
     expect(Sourcestore.getSource()).to.equal(data);
-    expect(Sourcestore.getSource()).to.not.be.empty;
+    expect(Sourcestore.getSource()).to.not.eql([]);
     expect(Sourcestore.getSource()[0].id).to.equal('abc-news-au');
   });
   it('it should filter source properly', () => {
@@ -28,6 +28,6 @@ describe('source store', () => {
     expect(Sourcestore.getSource()).to.not.equal(Sourcestore.getFilter());
     expect(Sourcestore.getFilter()[0].id).to.equal(filtered[0].id);
     expect(Sourcestore.getFilter().length).to.equal(1);
-    expect(Sourcestore.getFilter().length).to.not.be.undefined;
+    expect(Sourcestore.getFilter().length).to.not.equal(undefined);
   });
 });

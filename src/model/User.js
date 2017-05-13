@@ -1,6 +1,4 @@
 import Cookies from 'js-cookie';
-import Constant from '../constants/Constants';
-
 /**
  * @class User
  */
@@ -10,51 +8,48 @@ class User {
    * @memberof User
    */
   constructor() {
-    this.userDetails = Cookies.get(Constant.cookie) === undefined ?
-    undefined : JSON.parse(Cookies.get(Constant.cookie));
-    this.isLogin = this.isLoggedIn();
+    this.isLogin = this.userDetails();
   }
   /**
-   * @param {any} response
+   * logs the user in.
+   * @param {any} response an object containing user
+   * profile
    * @memberof User
-   * @returns{undefined}
+   * @returns {undefined} it returns no value
    */
   login(response) {
     const user = response.w3;
-    Cookies.set(Constant.cookie, {
+    Cookies.set('newsify', {
       name: user.ig,
       email: user.U3,
       imageUrl: user.Paa,
     });
     this.isLogin = true;
-    this.assignUserValues();
+    this.userDetails();
   }
   /**
-   * @returns {boolean} true when user is logged and false otherwise
+   * logs the user out.
    * @memberof User
-   */
-  isLoggedIn() {
-    return !(this.userDetails === undefined);
-  }
-  /**
-   * @memberof User
-   * @returns{undefined}
-   */
-  assignUserValues() {
-    this.userDetails = JSON.parse(Cookies.get(Constant.cookie));
-    if (this.isLogin) {
-      this.name = this.userDetails.name;
-      this.email = this.userDetails.email;
-      this.imageUrl = this.userDetails.imageUrl;
-    }
-  }
-  /**
-   * @memberof User
-   * @returns{undefined}
+   * @returns{undefined} it has no return value
    */
   logOut() {
     this.isLogin = false;
-    Cookies.remove(Constant.cookie);
+    Cookies.remove('newsify');
+  }
+  /**
+   * assings User values
+   * @returns {boolean} returns true or false
+   * @memberof User
+   */
+  userDetails() {
+    if (Cookies.get('newsify')) {
+      const Details = JSON.parse(Cookies.get('newsify'));
+      this.name = Details.name;
+      this.email = Details.email;
+      this.imageUrl = Details.imageUrl;
+      return true;
+    }
+    return false;
   }
 }
 export default new User();

@@ -9,7 +9,9 @@ chai.use(chaiEnzyme());
 const wrapper = shallow(<Share />);
 describe('test for share componet', () => {
   it('the component should exist', () => {
-    expect(wrapper).to.exist;
     expect(wrapper).to.be.present();
+  });
+  it('it should contain a 4 Demo__some-network class names', () => {
+    expect((wrapper).find('.Demo__some-network')).to.have.length(4);
   });
 });

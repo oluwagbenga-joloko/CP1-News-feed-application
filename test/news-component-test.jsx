@@ -9,7 +9,6 @@ const wrapper = shallow(<News />);
 
 describe('test for News componet', () => {
   it('the componet should exist', () => {
-    expect(wrapper).to.exist;
     expect(wrapper).to.be.present();
   });
   it('it should contain one input field', () => {
@@ -29,9 +28,7 @@ describe('test for News componet', () => {
     expect(wrapper.find('select')).to.not.have.className('glycfghvrch');
   });
   it('it should contain a div element', () => {
-    expect(wrapper.find('div')).to.exist;
-    expect(wrapper.find('div')).to.have.length(10);
-    expect(wrapper.find('div')).to.not.have.length(23);
+    expect(wrapper.find('div')).to.be.present();
   });
 });
 
