@@ -4,14 +4,14 @@ import Cookies from 'js-cookie';
  */
 class User {
   /**
-   * Creates an instance of User.
+   * @description Creates an instance of User.
    * @memberof User
    */
   constructor() {
     this.isLogin = this.userDetails();
   }
   /**
-   * logs the user in.
+   *@description  logs the user in.
    * @param {any} response an object containing user
    * profile
    * @memberof User
@@ -28,7 +28,7 @@ class User {
     this.userDetails();
   }
   /**
-   * logs the user out.
+   * @description logs the user out.
    * @memberof User
    * @returns{undefined} it has no return value
    */
@@ -37,8 +37,8 @@ class User {
     Cookies.remove('newsify');
   }
   /**
-   * assigns User values
-   * @returns {boolean} returns true or false
+   * @description assigns User values
+   * @returns {boolean}  true or false
    * @memberof User
    */
   userDetails() {

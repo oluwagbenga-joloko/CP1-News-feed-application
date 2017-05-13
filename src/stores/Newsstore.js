@@ -18,7 +18,7 @@ class NewsStore extends EventEmitter {
   }
 /**
  * @description returns list of news
- * @returns {object} returns list of news.
+ * @returns {object} list of news.
  * @memberof NewsStore
  */
   getNews() {
