@@ -11,7 +11,7 @@ import Search from './Search.jsx';
 class Sources extends Component {
   /**
    * @description Creates an instance of Sources.
-   * @param {any} props
+   * @param {object} props input for component.
    * @memberof Sources
    */
   constructor(props) {
@@ -24,9 +24,9 @@ class Sources extends Component {
   }
 
   /**
-   * @description rund befor the component mounts
+   * @description runs before the component mounts and calls an action.
    * @memberof Sources
-   * @returns {undefined}
+   * @returns {undefined} no return value
    */
   componentWillMount() {
     Actions.getsources();
@@ -37,7 +37,7 @@ class Sources extends Component {
   /**
    * @description runs while Component is unmounting
    * @memberof Sources
-   * @returns {undefined}
+   * @returns {undefined} no return value
    */
   componentWillUnmount() {
     Sourcestore.removeListener('source', this.onChangeSource);
@@ -60,7 +60,7 @@ class Sources extends Component {
     this.setState({ newslist: Sourcestore.getSource() });
   }
    /**
-   * @description handles key up event and calls an action
+   * @description handles key up event and calls an action to filter source.
    * @param {any} event trigered by html actions
    * @memberof Sources
    * @returns {undefined} returns no value
@@ -71,7 +71,7 @@ class Sources extends Component {
     Actions.filter(this.query);
   }
   /**
-   * renders the react component
+   * @description renders the react component
    * @memberof Sources
    * @returns {*} returns element
    */

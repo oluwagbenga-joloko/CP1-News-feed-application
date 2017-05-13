@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 /**
  * @description handles Search of news sources.
- * @param {any} props input for component
+ * @param {object} props input for component
  * @returns {*} element to be rendered
  */
 function Search(props) {

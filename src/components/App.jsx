@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 /**
- * @description the app component all
+ * @description the app component. All
  * other components that require a header and footer are rendered within
  * @param {object} props input for component
  * @returns {*} renders react element
