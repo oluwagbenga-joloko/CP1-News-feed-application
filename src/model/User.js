@@ -37,7 +37,7 @@ class User {
     Cookies.remove('newsify');
   }
   /**
-   * assings User values
+   * assigns User values
    * @returns {boolean} returns true or false
    * @memberof User
    */

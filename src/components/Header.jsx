@@ -1,8 +1,8 @@
 import React from 'react';
 import User from '../model/User';
 /**
- * header element
- * @returns {*} element to be rendered
+ *@description header element
+ *@returns {*} element to be rendered
  */
 function Header() {
   const fullName = User.name.split(' ');

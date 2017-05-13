@@ -10,7 +10,7 @@ import Search from './Search.jsx';
  */
 class Sources extends Component {
   /**
-   * Creates an instance of Sources.
+   * @description Creates an instance of Sources.
    * @param {any} props
    * @memberof Sources
    */
@@ -24,7 +24,7 @@ class Sources extends Component {
   }
 
   /**
-   * rund befor the component mounts
+   * @description rund befor the component mounts
    * @memberof Sources
    * @returns {undefined}
    */
@@ -35,7 +35,7 @@ class Sources extends Component {
   }
 
   /**
-   *  runs while Component is unmounting
+   * @description runs while Component is unmounting
    * @memberof Sources
    * @returns {undefined}
    */
@@ -44,7 +44,7 @@ class Sources extends Component {
     Sourcestore.removeListener('filter', this.onChangeFilter);
   }
   /**
-   * runs before the component mounts
+   * @description runs before the component mounts
    * @memberof Sources
    * @returns {undefined}
    */
@@ -52,16 +52,16 @@ class Sources extends Component {
     this.setState({ newslist: Sourcestore.getFilter() });
   }
   /**
-   * sets the state of the sources component
+   * @description sets the state of the sources component
    * @memberof Sources
-   * @returns {undefined}
+   * @returns {undefined} returns no value
    */
   onChangeSource() {
     this.setState({ newslist: Sourcestore.getSource() });
   }
    /**
-   * handles key up event and calls an action
-   * @param {any} event
+   * @description handles key up event and calls an action
+   * @param {any} event trigered by html actions
    * @memberof Sources
    * @returns {undefined} returns no value
    */
@@ -82,17 +82,26 @@ class Sources extends Component {
     } else if (this.state.newslist[0] === undefined) {
       list = <p className="text-center error"> not found </p>;
     } else {
-      const sources = this.state.newslist.map(data => (
-        <div className="col-md-6 item" key={data.url}>
-          <div className="well ">
-            <a href={`/#/newslist/${data.id}?sort=${data.sortBysAvailable}&name=${data.name}`}>
-              <img className="arrow" alt=" could not load" src="./Images/arrow-gray.png" />
-            </a>
-            <h4>{data.name}</h4>
-            <p>{data.description}</p>
+      const sources = this.state.newslist.map((data) => {
+        const sort = data.sortBysAvailable;
+        return (
+          <div className="col-md-6 item" key={data.url}>
+            <div className="well ">
+              <a
+                href={`/#/newslist/${data.id}?sort=${sort}&name=${data.name}`}
+              >
+                <img
+                  className="arrow"
+                  alt=" could not load"
+                  src="./Images/arrow-gray.png"
+                />
+              </a>
+              <h4>{data.name}</h4>
+              <p>{data.description}</p>
+            </div>
           </div>
-        </div>
-         ));
+        );
+      });
       const masonryOptions = {
         transitionDuration: '1s'
       };

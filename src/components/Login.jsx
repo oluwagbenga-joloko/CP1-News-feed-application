@@ -7,14 +7,13 @@ const history = createHistory({
   forceRefresh: true,
 });
 /**
- * log in Component
- * logs the user in
+ * @description log in Component
  * @class login
  * @extends {Component}
  */
 class Login extends Component {
   /**
-   * runs before component mounts
+   * @description runs before component mounts
    * @memberof login
    * @return {undefined} has no return value
    */
@@ -24,6 +23,7 @@ class Login extends Component {
     }
   }
   /**
+   * @description renders html
    * @returns {*} element to be rendered
    * @memberof login
    */

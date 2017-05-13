@@ -6,14 +6,13 @@ const history = createHistory({
   forceRefresh: true,
 });
 /**
- * log out Component
+ * @description log out Component
  * @class Logout
  * @extends {Component}
  */
 class Logout extends Component {
   /**
-   *runs before Component mounts
-   *logs the user out
+   * @description runs before Component mounts, logs the user out.
    * @memberof Logout
    * @returns {null} it has no return value
    */

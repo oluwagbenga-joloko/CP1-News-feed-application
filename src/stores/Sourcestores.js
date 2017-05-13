@@ -3,12 +3,13 @@ import Dispatcher from '../dispatcher/Dispatcher';
 import Constant from '../constants/Constants';
 
 /**
+ * @description updates the source componenet.
  * @class SourceStore
  * @extends {EventEmitter}
  */
 class SourceStore extends EventEmitter {
   /**
-   * Creates an instance of SourceStore.
+   * @description Creates an instance of SourceStore.
    * @memberof SourceStore
    */
   constructor() {
@@ -17,14 +18,16 @@ class SourceStore extends EventEmitter {
     this.filterlist = [];
   }
   /**
-   * @returns {object} returns list of news sources
+   * @description returns list of news sources
+   * @returns {object} list of news sources
    * @memberof SourceStore
    */
   getSource() {
     return this.sourcelist;
   }
   /**
-   * @returns {object} returns list of filteres sources.
+   * @description returns list of filtered sources.
+   * @returns {object} list of filteres sources.
    * @memberof SourceStore
    */
   getFilter() {
