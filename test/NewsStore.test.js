@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import Newsstore from '../src/stores/Newsstore';
 import Constants from '../src/constants/Constants';
 import Dispatcher from '../src/dispatcher/Dispatcher';
-import { Articles } from './test-data';
+import { Articles } from './TestData';
 
 describe('news store', () => {
   const data = Articles;

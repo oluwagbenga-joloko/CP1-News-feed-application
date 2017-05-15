@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import User from '../src/model/User';
-import { Response } from './test-data';
+import { Response } from './TestData';
 
 describe('test for user model', () => {
   it('should exist', () => {
