@@ -1,10 +1,10 @@
-function getDevTool() {
+const getDevTool = () => {
   if (process.env.NODE_ENV !== 'production') {
     return 'source-map'; // enables source map
   }
 
   return false;
-}
+};
 const Dotenv = require('dotenv-webpack');
 
 
