@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import Sourcestore from '../src/stores/Sourcestores';
 import Dispatcher from '../src/dispatcher/Dispatcher';
 import Constants from '../src/constants/Constants';
-import { Source } from './test-data';
+import { Source } from './TestData';
 
 describe('source store', () => {
   const data = Source;

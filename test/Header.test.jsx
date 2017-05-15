@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Header from '../src/components/Header';
 import User from '../src/model/User';
-import { Response } from './test-data';
+import { Response } from './TestData';
 
 chai.use(chaiEnzyme());
 User.login(Response);

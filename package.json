@@ -7,7 +7,7 @@
     "build": "./node_modules/webpack/bin/webpack.js -p",
     "start": "node server",
     "local": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors --inline --watch",
-    "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*-test.jsx test/**/*-test.js",
+    "test": "nyc --extension .jsx --reporter=html --reporter=text ./node_modules/mocha/bin/_mocha test/.setup.js test/**/*.test.jsx test/**/*.test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls > lcov.info",
     "covercheck": "nyc report --reporter=text-lcov > lcov.info",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=c1f2057afc773548967b6e5c689c846502912405e867ac4c0fc07d243e608755 codeclimate-test-reporter < lcov.info"

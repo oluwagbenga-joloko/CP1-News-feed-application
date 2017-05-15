@@ -43,10 +43,10 @@ class User {
    */
   userDetails() {
     if (Cookies.get('newsify')) {
-      const Details = JSON.parse(Cookies.get('newsify'));
-      this.name = Details.name;
-      this.email = Details.email;
-      this.imageUrl = Details.imageUrl;
+      const details = JSON.parse(Cookies.get('newsify'));
+      this.name = details.name;
+      this.email = details.email;
+      this.imageUrl = details.imageUrl;
       return true;
     }
     return false;

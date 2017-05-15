@@ -13,10 +13,10 @@ describe('test for footer component', () => {
     expect(wrapper).to.be.present();
   });
   it(`it should have the firt p tag with text 
-     = © Copyright 2017 Andela || By  Oluwagbenga Joloko`, () => {
+     = © Copyright 2017 || By  Oluwagbenga Joloko`, () => {
     expect(wrapper.find('footer')
     .childAt(0)).to.have
-    .text('© Copyright 2017 Andela || By-Oluwagbenga Joloko');
+    .text('© Copyright 2017 || By-Oluwagbenga Joloko');
     expect(wrapper.find('footer')
     .childAt(0)).to.not.have.text('Copyright 201099');
   });

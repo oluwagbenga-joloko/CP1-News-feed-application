@@ -6,7 +6,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="container-fluid text-center navbar">
-      <p className="footer">&copy; Copyright 2017 Andela || By-
+      <p className="footer">&copy; Copyright 2017 || By-
         <a
           className="github"
           href="https://github.com/andela-ojoloko/CP1-News-feed-application"
